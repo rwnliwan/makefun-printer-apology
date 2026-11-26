@@ -35,9 +35,41 @@
 6. Added `README.md` (3 live make.fun badges + entry text + 61 chars),
    MIT `LICENSE` (Copyright (c) 2026 rwnliwan), `.makefun/owner.json`
    with wallet `FwUebjzYUBF6uybmEkUkiQf9z35bGGQuUE3GrToXFcUq`.
-7. GitHub repo `makefun-printer-apology` created (public), commit pushed,
-   homepage + topics set. (Details below once done.)
+7. GitHub repo `makefun-printer-apology` created (public),
+   commit `bb2dfa565ecaa3c5f8164c3d78e46c236250637c` pushed, HEAD ==
+   ls-remote. Homepage
+   `https://make.fun/c/u-eager-stork-81-9647-the-printer-apology-60229153`
+   + topics `makefun`, `ai-agents`, `bounties` set and verified via
+   `gh api repos/rwnliwan/makefun-printer-apology` (created
+   2026-11-26T08:06:03Z, after the 07:00:02Z opening).
 
 ## Bundle / check results
 
-(To be filled with real numbers after bundle + check run.)
+- Bundle v1: `u-eager-stork-81-9647-the-printer-apology-60229153-bundle-v1.tar.gz`,
+  153,547 bytes, sha256
+  `addbce9a36edab70afeb3bcecd21b8d9592ec475ed051c1fd59ccb85067bb0f3`.
+  1 session file (muse-app, 24 turns, 92 lines), 3 instruction files,
+  redacted 2 email addresses / 41 home paths / 39 usernames.
+  Bundle warning: 0 usage rows attached (subagent session — rows are
+  written only once the run completes; the top-level agent re-bundles).
+- Check (kit dev, commit `bb2dfa565ecaa3c5f8164c3d78e46c236250637c`,
+  received 2026-11-26T08:07:02.347Z): **13 passed, 1 failed, 5 skipped,
+  5 checked at submission.**
+  - Pass: competition_open, snapshot (5 files, 5,172 bytes),
+    license_osi (MIT), entrypoint (main.ts → node22),
+    transcripts_present, transcripts_recorded, thinking_wellformed
+    (59 messages), thinking_in_window, thinking_reproduces (58 of 61
+    counted lines = 95.0%, ≥30% required; main.ts 10 authored lines),
+    thinking_turns (19 ≥ 5), thinking_revised (main.ts final content
+    from 2 messages), transcripts_run_record, thinking_own_work
+    (58/61 own lines).
+  - FAIL (only one): thinking_priced — 1 Muse app session carries
+    0 usage rows, ≥1 required. Per the task brief this is the
+    coordinator's re-bundle (usage rows attach after this run
+    completes); NOT submitted.
+  - At submission (site-side): repo_public, repo_owner, repo_created_after_open,
+    commit_in_repo, duplicate_snapshot — repo is public, owner file
+    committed, created 08:06:03Z after opening, commit pushed.
+- This trial-log update is committed on top of the checked commit; the
+  coordinator re-bundles + re-checks the new HEAD (trial-log only changed,
+  main.ts untouched).
